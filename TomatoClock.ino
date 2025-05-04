@@ -1,4 +1,5 @@
-/* TomatoClock for M5Cardputer
+/* 
+ * TomatoClock for M5Cardputer
  * Author: Faisal F Rafat
  * GitHub: https://github.com/ffrafat
  * Date: 5 May 2025
@@ -13,6 +14,8 @@
  * - Time adjustment (+/-)
  * - Pause/resume functionality
  * - Session count display
+*/
+
 
 #include "M5Cardputer.h"
 #include "M5GFX.h"
@@ -24,8 +27,8 @@ TimerState state = STOPPED;
 
 unsigned long startTime = 0;
 unsigned long pausedTime = 0;
-int focusDuration = 0.5 * 60;  // Default: 25 min
-int breakDuration = 0.2 * 60;   // Default: 5 min
+int focusDuration = 25 * 60;  // Default: 25 min
+int breakDuration = 5 * 60;   // Default: 5 min
 bool onBreak = false;
 int sessionsCompleted = 0;
 bool autoStartNext = false;  // Toggle auto-start
